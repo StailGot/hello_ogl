@@ -2,11 +2,9 @@
 
 project( cdzen )
 
-find_package(glm REQUIRED)
-find_package(glfw3 REQUIRED)
+conan_basic_setup()
 
 set (CMAKE_CXX_STANDARD 17)
-
 add_executable (cdzen "cdzen.cpp" )
 
-target_link_libraries(cdzen glm glfw)
+conan_target_link_libraries(cdzen)

@@ -4,6 +4,6 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("cdzen")
-
+include(${CMAKE_BINARY_DIR}/../../../props/conanbuildinfo_multi.cmake)
 # Include sub-projects.
 add_subdirectory ("cdzen")

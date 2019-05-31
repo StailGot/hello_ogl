@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("cdzen")
-include(${CMAKE_BINARY_DIR}/../../../props/conanbuildinfo_multi.cmake)
+include( props/conanbuildinfo_multi.cmake )
 
 set (CMAKE_CXX_STANDARD 17)
 

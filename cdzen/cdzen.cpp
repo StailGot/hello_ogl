@@ -1,5 +1,6 @@
 ﻿
-#include <glad/glad.h>
+#include <GL/glew.h>
+// #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 int main()
@@ -7,7 +8,8 @@ int main()
   ::glfwInit();
   auto window = ::glfwCreateWindow( 800, 600, "", {}, {} );
   ::glfwMakeContextCurrent( window );
-  ::gladLoadGL();
+  ::glewInit();
+  // ::gladLoadGL();
   ::glfwSetWindowSizeCallback( window, []( auto _, auto... args ) { ::glViewport( 0, 0, args... ); } );
 
   while ( !::glfwWindowShouldClose( window ) )
